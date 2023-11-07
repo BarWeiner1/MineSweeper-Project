@@ -36,21 +36,21 @@ public class MineSweeperGameController extends MouseAdapter implements ActionLis
 		if(s== null) {
 			view.incrementTime();
 		}
-		else if(s.equals("Restart")) {
+		else if("Restart".equals(s)) {
 			MineSweeperView.restartTime();
 			panel.restart();
 			
 			
 		}
-		else if(s.equals("Minesweeper Rules")) {
+		else if("Minesweeper Rules".equals(s)) {
 			JOptionPane.showMessageDialog(MineSweeperMain.window, "You are presented with a board of squares. Some squares contain mines (bombs), others don't. If you click on a square containing a bomb, you lose. If you manage to click all the squares (without clicking on any bombs) you win.\n" + 
 					"Clicking a square which doesn't have a bomb reveals the number of neighbouring squares containing bombs. Use this information plus some guess work to avoid the bombs.\n" + 
 					"To open a square, point at the square and click on it. To mark a square you think is a bomb, point and command-click .");
 		}
-		else if(s.equals("About the Founder")) {
+		else if("About the Founder".equals(s)) {
 			JOptionPane.showMessageDialog(MineSweeperMain.window, "Bar Weiner is a 10th Grade Student at Los Altos High School, he recieved inspiration for his final project from classic game MineSweeper.");
 		}
-		else if(s.equals("Easy")) {
+		else if("Easy".equals(s)) {
 			panel.setCellDimensions(8);
 			panel.setNumBombs(10);
 			panel.runGame();
@@ -58,7 +58,7 @@ public class MineSweeperGameController extends MouseAdapter implements ActionLis
 			view.nextCard("GamePanel");
 			MineSweeperView.restartTime();
 		}
-		else if(s.equals("Medium")) {
+		else if("Medium".equals(s)) {
 			panel.setCellDimensions(16);
 			panel.setNumBombs(20);
 			panel.runGame();
@@ -66,7 +66,7 @@ public class MineSweeperGameController extends MouseAdapter implements ActionLis
 			view.nextCard("GamePanel");
 			MineSweeperView.restartTime();
 		}
-		else if(s.equals("Hard")) {
+		else if("Hard".equals(s)) {
 			panel.setCellDimensions(24);
 			panel.setNumBombs(99);
 			panel.runGame();
